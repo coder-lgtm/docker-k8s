@@ -8,16 +8,18 @@ instructions for installing Docker on your local environment.
 The Workshop will be presented in a virtual setting. 
 We will have the exact setup on our systems (MacOS Catalina).
 
-It is advisable but not a mandatory requirement that you have performed 
-these steps beforehand. That way, you can follow along during the workshop
-to launch your Docker Container locally and later to a public cloud.
-(Google Cloud Platform free tier account).
+It is advisable but not mandatory that you have performed 
+these steps beforehand. That way, you can follow along during 
+the workshop to launch your Docker Container locally and later 
+to a public cloud (Google Cloud Platform free tier account).
+
 --------------------------------------------------------
+
 Built With
 
-Python
-Flask
-docker-engine
+- Python
+- Flask
+- docker-engine
 
 --------------------------------------------------------
 Installation
