@@ -22,12 +22,13 @@ Built with
 
 # Installation
 
-1. Clone the repo:
+1. Clone the repo and cd into it:
 ```
 git clone git@github.com:coder-lgtm/docker-k8s.git
+cd docker-k8s
 ```
 
-2. Make sure you have Homebrew available. If not, go into the repo and run following script:
+2. Make sure you have Homebrew available. If not, run following script from the repo:
 ```
 ./tools/brew_installation.sh
 ```
@@ -42,21 +43,27 @@ If Python is not installed, then run:
 brew install python
 ```
 
-4. To launch the python web application locally, you will need some dependencies such as Flask and Requests. Make sure that you have Pip available.
+4. To launch the python web application locally, you will need some dependencies such as Flask and Requests. Install Pip, Flask, and Requests with the commands below:
 ```
 sudo easy_install pip
 sudo pip install flask
 pip install requests
 ```
 
-5 Launch your  Web Application!
+5. Launch your "Hello World" Web Application
 
-At this point you are ready to run your Python web app locally! 
-In the repo
-5.1 Run Simple Hello World Web App 
+Make sure you are in the repo directory and run the following command:
+```
 python ./app/hello_world.py 
-If you go to the browser and go to http://localhost:5000/,
-Check the response to see "Hello World!" greeting
+```
+
+Then go to your browser and go to this URL:
+```
+http://localhost:5000/
+```
+
+The response should say "Hello World!".
+
 
 5.2 Run Weather API Web App
 python ./app/weather_cock.py
