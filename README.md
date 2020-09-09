@@ -50,25 +50,35 @@ sudo pip install flask
 pip install requests
 ```
 
-5. Launch your "Hello World" Web Application
+5. Launch your Hello World Web Application
 
 Make sure you are in the repo directory and run the following command:
 ```
-python ./app/hello_world.py 
+python ./app/helloworld/hello_world.py 
 ```
 
-Then go to your browser and go to this URL:
+Go to your browser and go to the below URL:
 ```
 http://localhost:5000/
 ```
 
-The response should say "Hello World!".
+The response should say:
+```
+Hello World!
+```
 
+6. Launch your Weather API Web Application
 
-5.2 Run Weather API Web App
-python ./app/weather_cock.py
-If you go to the browser to see weather data for a Zip Code
+Make sure you are in the repo directory and run the following command:
+```
+python ./app/weathervane/weather_vane.py
+```
+
+Go to your browser and go to the below URL, using the zip code of your choice (we are using the zip code for Redwood City, California):
+```
 http://localhost:5000/weather?zip=94065
+```
+
 Check the response to see weather details as below
 {
   "current": {
