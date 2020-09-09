@@ -32,23 +32,22 @@ git clone git@github.com:coder-lgtm/docker-k8s.git
 ./tools/brew_installation.sh
 ```
 
-3. Python Installation
+3. Install Python. Check for Python by checking for the version.
+```
+python --version
+```
 
-3.1 Make sure you have python installed
-python -version
-If not installed run
+If Python is not installed, then run:
+```
 brew install python
+```
 
-4. To launch the python web application locally, you will need 
-some dependencies such as Flask and Requests. Make sure that you 
-have pip available.
-
+4. To launch the python web application locally, you will need some dependencies such as Flask and Requests. Make sure that you have Pip available.
+```
 sudo easy_install pip
-
-pip install flask
-
+sudo pip install flask
 pip install requests
-
+```
 
 5 Launch your  Web Application!
 
