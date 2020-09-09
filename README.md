@@ -27,9 +27,10 @@ Built with
 git clone git@github.com:coder-lgtm/docker-k8s.git
 ```
 
-2. Make sure you have homebrew available. If not, run following 
- script from the repo:
- ./tools/brew_installtion.sh
+2. Make sure you have Homebrew available. If not, go into the repo and run following script:
+```
+./tools/brew_installation.sh
+```
 
 3. Python Installation
 
