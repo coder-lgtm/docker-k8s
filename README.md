@@ -1,12 +1,12 @@
-Docker and Kubernetes Hands On Workshop for the beginners
+Docker and Kubernetes Hands On Workshop for Beginners
 --------------------------------------------------------
 About the project
 
 This project includes sample Python Flask applications and
 instructions for installing Docker on your local environment.
 
-The Workshop will be presented in a virtual settings. 
-We will have the exact setup on our system (MacOS Catalina).
+The Workshop will be presented in a virtual setting. 
+We will have the exact setup on our systems (MacOS Catalina).
 
 It is advisable but not a mandatory requirement that you have performed 
 these steps beforehand. That way, you can follow along during the workshop
