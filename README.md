@@ -1,31 +1,31 @@
-Docker and Kubernetes Hands On Workshop for Beginners
+Docker and Kubernetes Hands-On Workshop for Beginners
+
 --------------------------------------------------------
+
 About the project
 
-This project includes sample Python Flask applications and
-instructions for installing Docker on your local environment.
+This project includes sample Python Flask applications and instructions for installing Docker on your local environment.
 
-The Workshop will be presented in a virtual setting. 
-We will have the exact setup on our systems (MacOS Catalina).
+The Workshop will be presented in a virtual setting. We will have the same setup on our systems (MacOS Catalina).
 
-It is advisable but not mandatory that you have performed 
-these steps beforehand. That way, you can follow along during 
-the workshop to launch your Docker Container locally and later 
-to a public cloud (Google Cloud Platform free tier account).
+It is advisable but not mandatory that you have performed these steps beforehand. That way, you can follow along during the workshop to launch your Docker Container locally and later to a public cloud (Google Cloud Platform free tier account).
 
 --------------------------------------------------------
 
-Built With
+Built with
 
 - Python
 - Flask
 - docker-engine
 
 --------------------------------------------------------
-Installation
+
+# Installation
 
 1. Clone the repo:
+```
 git clone git@github.com:coder-lgtm/docker-k8s.git
+```
 
 2. Make sure you have homebrew available. If not, run following 
  script from the repo:
