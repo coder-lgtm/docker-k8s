@@ -59,6 +59,8 @@ sudo pip install flask
 pip install requests
 ```
 
+# Launch your Web Applications!
+
 5. Launch your Hello World Web Application
 
 Make sure you are in the repo directory and run the following command:
@@ -133,6 +135,8 @@ The response should look like the below (it may be unformatted):
 }
 ```
 
+# Docker 
+
 6. Install Docker and Virtualbox by running the commands below *TBD details*.
 
 Update Brew (this may take a few minutes):
@@ -175,9 +179,16 @@ Connect to the Docker machine *TBD details*:
 docker-machine env eval $(docker-machine env)
 ```
 
-6.1.4. Check if there are any running processes:
- (There will be none and we will launch one during the Workshop!)
+9. Check if there are any running processes (there will be none and we will launch one during the Workshop!):
+```
 docker ps
-Expected output is as below:
+```
+
+The expected output is shown below:
+```
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+```
+
+
+
 
