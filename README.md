@@ -79,7 +79,8 @@ Go to your browser and go to the below URL, using the zip code of your choice (w
 http://localhost:5000/weather?zip=94065
 ```
 
-Check the response to see weather details as below
+The response should look like the below:
+```
 {
   "current": {
     "gust_kph": 11.5, 
@@ -121,29 +122,49 @@ Check the response to see weather details as below
     "localtime": "2020-09-06 12:10"
   }
 }
+```
 
-6. Install Docker and Virtualbox
+6. Install Docker and Virtualbox by running the commands below *TBD details*.
 
+Update Brew (this may take a few minutes):
+```
 brew update
+```
 
+Install Docker packages:
+```
 brew install docker
-
 brew install docker-machine
+```
 
+Install Virtualbox:
+```
 brew cask install virtualbox
+```
 
-6.1. Validate Docker Installation:
+If your Mac asks you for permission, go to System Preferences -> Security & Privacy -> General. You will see a message like `System software from developer "Oracle America, Inc." was blocked from loading`. Click on the lock in the lower left corner and click Allow, then run `brew cask install virtualbox` again.
 
-6.1.1 Launch "default" docker machine
+7.  Validate the Docker installation by launching the Docker machine named "default":
+```
 docker-machine create --driver virtualbox default
+```
 
-6.1.2. Confirm that the docker machine is running
+Confirm that the Docker machine is running:
+```
 docker-machine ls 
+```
 
-6.1.3. Connect to Docker 
-docker-machine start (if there's no running machine)
-docker-machine env
-eval $(docker-machine env)
+8. Connect to Docker
+
+Start the Docker machine if it is not running *TBD details*:
+```
+docker-machine start
+```
+
+Connect to the Docker machine *TBD details*:
+```
+docker-machine env eval $(docker-machine env)
+```
 
 6.1.4. Check if there are any running processes:
  (There will be none and we will launch one during the Workshop!)
