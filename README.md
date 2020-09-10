@@ -4,6 +4,34 @@ This project is a Workshop presented to Women in Technology. **DETAILS TBD**
 
 The Workshop will be presented in a virtual setting.
 
+#### Table of Contents  
+[Getting Started]()
+[Prerequisites]()
+...snip...    
+<a name="headers"/>
+## Headers
+
+[Getting Started](https://github.com/coder-lgtm/docker-k8s#getting-started)
+[Prerequisites](https://github.com/coder-lgtm/docker-k8s#prerequisites)
+[Installation](https://github.com/coder-lgtm/docker-k8s#installation)
+[1. Clone this repo](https://github.com/coder-lgtm/docker-k8s#1-clone-this-repo)
+[2. Install Homebrew](https://github.com/coder-lgtm/docker-k8s#2-install-homebrew)
+[3. Install Python](https://github.com/coder-lgtm/docker-k8s#3-install-python)
+[4. Install Pip](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[5. Install dependency packages Flask and Requests](https://github.com/coder-lgtm/docker-k8s#5-install-dependency-packages-flask-and-requests)
+[Launch Your Web Applications!](https://github.com/coder-lgtm/docker-k8s#launch-your-web-applications)
+[5. Launch your Hello World web application](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[6. Launch your Weather API web application](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[Docker](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[7. Install Docker](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[8. Install Virtualbox](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[9. Validate the Docker installation](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[10. Connect to Docker](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[11. Check Docker processes](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[Built With](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[Authors](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
+
 ## Getting Started
 
 This project includes sample Python Flask applications and instructions for installing Docker on your local environment.
@@ -49,7 +77,7 @@ $ pip install requests
 
 ### Launch Your Web Applications!
 
-#### 5. Launch your Hello World web application
+#### 6. Launch your Hello World web application
 ```
 $ python ./app/helloworld/hello_world.py 
 ```
@@ -64,7 +92,7 @@ The expected response is:
 Hello World!
 ```
 
-#### 6. Launch your Weather API web application
+#### 7. Launch your Weather API web application
 ```
 $ python ./app/weathervane/weather_vane.py
 ```
@@ -121,21 +149,21 @@ The expected response is something like the below (it may be unformatted):
 
 ### Docker 
 
-#### 7. Install Docker
+#### 8. Install Docker
 
 ```
 $ brew install docker
 $ brew install docker-machine
 ```
 
-#### 8. Install Virtualbox
+#### 9. Install Virtualbox
 ```
 brew cask install virtualbox
 ```
 
 If your Mac asks you for permission, go to System Preferences -> Security & Privacy -> General. You will see a message like `System software from developer "Oracle America, Inc." was blocked from loading`. Click on the lock in the lower left corner and click Allow, then run `brew cask install virtualbox` again.
 
-#### 9. Validate the Docker installation
+#### 10. Validate the Docker installation
 Launch the Docker machine named "default":
 ```
 docker-machine create --driver virtualbox default
@@ -151,7 +179,7 @@ The expected output is shown below:
 TBD
 ```
 
-#### 10. Connect to Docker
+#### 11. Connect to Docker
 
 Start the Docker machine if it is not running *TBD details*:
 ```
@@ -163,7 +191,7 @@ Connect to the Docker machine *TBD what is docker-machine set to?*:
 docker-machine env eval $(docker-machine env)
 ```
 
-#### 11. Check Docker processes
+#### 12. Check Docker processes
 ```
 docker ps
 ```
