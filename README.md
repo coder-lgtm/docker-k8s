@@ -1,26 +1,21 @@
 # Docker and Kubernetes Hands-On Workshop for Beginners
 
---------------------------------------------------------
+This project is a Workshop presented to Women in Technology. <DETAILS>
 
-About the project
+The Workshop will be presented in a virtual setting.
+
+## Getting Started
 
 This project includes sample Python Flask applications and instructions for installing Docker on your local environment.
 
-The Workshop will be presented in a virtual setting. We will have the same setup on our systems (MacOS Catalina).
-
 It is advisable but not mandatory that you have performed these steps beforehand. That way, you can follow along during the workshop to launch your Docker Container locally and later to a public cloud (Google Cloud Platform free tier account).
 
---------------------------------------------------------
+### Prerequisites
 
-Built with
+We are using Macbooks running MacOS Catalina.
 
-- Python
-- Flask
-- Docker Engine
 
---------------------------------------------------------
-
-## Installation
+### Installation
 
 1. Clone the repo and cd into it:
 ```
@@ -59,7 +54,7 @@ sudo pip install flask
 pip install requests
 ```
 
-## Launch your Web Applications!
+### Launch your Web Applications!
 
 5. Launch your Hello World Web Application
 
@@ -135,7 +130,7 @@ The response should look like the below (it may be unformatted):
 }
 ```
 
-## Docker 
+### Docker 
 
 6. Install Docker and Virtualbox by running the commands below *TBD details*.
 
@@ -193,6 +188,20 @@ The expected output is shown below:
 ```
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
+
+
+
+
+## Built With
+
+* [Python](https://www.python.org/)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [Docker Engine](https://docs.docker.com/engine/)
+
+## Authors
+
+* **Rutuja Joshi**
+* **Anita Carey**
 
 
 
