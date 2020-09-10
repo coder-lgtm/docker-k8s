@@ -12,43 +12,35 @@ It is advisable but not mandatory that you have performed these steps beforehand
 
 ### Prerequisites
 
-We are using Macbooks running MacOS Catalina.
+The steps below were executed on Macbooks running MacOS Catalina.
 
 
 ### Installation
 
-1. Clone the repo and cd into it:
+#### 1. Clone this repo
 ```
 git clone git@github.com:coder-lgtm/docker-k8s.git
+```
+```
 cd docker-k8s
 ```
 
-2. Make sure you have Homebrew available. If not, run following script from the repo:
+#### 2. Install Homebrew
 ```
 ./tools/brew_installation.sh
 ```
 
-3. Install Python. Check for Python by checking for the version.
-```
-python --version
-```
-
-If Python is not installed, then run:
+#### 3. Install Python
 ```
 brew install python
 ```
 
-4. To launch the Python web application locally, you will need the dependency packages Flask and Requests. Use Pip to install Flask and Requests. Check for Pip by checking for the version:
-```
-pip --version
-```
-
-If Pip is not installed, then run:
+#### 4. Install Pip
 ```
 sudo easy_install pip
 ```
 
-Install Flask and Requests with the commands below:
+#### 5. Install dependency packages Flask and Requests
 ```
 sudo pip install flask
 pip install requests
