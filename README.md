@@ -1,4 +1,4 @@
-Docker and Kubernetes Hands-On Workshop for Beginners
+# Docker and Kubernetes Hands-On Workshop for Beginners
 
 --------------------------------------------------------
 
@@ -16,11 +16,11 @@ Built with
 
 - Python
 - Flask
-- docker-engine
+- Docker Engine
 
 --------------------------------------------------------
 
-# Installation
+## Installation
 
 1. Clone the repo and cd into it:
 ```
@@ -59,7 +59,7 @@ sudo pip install flask
 pip install requests
 ```
 
-# Launch your Web Applications!
+## Launch your Web Applications!
 
 5. Launch your Hello World Web Application
 
@@ -135,7 +135,7 @@ The response should look like the below (it may be unformatted):
 }
 ```
 
-# Docker 
+## Docker 
 
 6. Install Docker and Virtualbox by running the commands below *TBD details*.
 
