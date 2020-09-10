@@ -24,25 +24,25 @@ The Workshop will be presented in a virtual setting.
 
 [Launch Your Web Applications!](https://github.com/coder-lgtm/docker-k8s#launch-your-web-applications)
 
-[5. Launch your Hello World web application](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[6. Launch your Hello World web application](https://github.com/coder-lgtm/docker-k8s#6-launch-your-hello-world-web-application)
 
-[6. Launch your Weather API web application](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[7. Launch your Weather API web application](https://github.com/coder-lgtm/docker-k8s#7-launch-your-weather-api-web-application)
 
-[Docker](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[Docker](https://github.com/coder-lgtm/docker-k8s#docker)
 
-[7. Install Docker](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[8. Install Docker](https://github.com/coder-lgtm/docker-k8s#8-install-docker)
 
-[8. Install Virtualbox](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[9. Install Virtualbox](https://github.com/coder-lgtm/docker-k8s#9-install-virtualbox)
 
-[9. Validate the Docker installation](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[10. Validate the Docker installation](https://github.com/coder-lgtm/docker-k8s#10-validate-the-docker-installation)
 
-[10. Connect to Docker](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[11. Connect to Docker](https://github.com/coder-lgtm/docker-k8s#11-connect-to-docker)
 
-[11. Check Docker processes](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[12. Check Docker processes](https://github.com/coder-lgtm/docker-k8s#12-check-docker-processes)
 
-[Built With](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[Built With](https://github.com/coder-lgtm/docker-k8s#built-with)
 
-[Authors](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+[Authors](https://github.com/coder-lgtm/docker-k8s#authors)
 
 
 
