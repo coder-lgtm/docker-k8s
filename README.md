@@ -4,32 +4,46 @@ This project is a Workshop presented to Women in Technology. **DETAILS TBD**
 
 The Workshop will be presented in a virtual setting.
 
-#### Table of Contents  
-[Getting Started]()
-[Prerequisites]()
-...snip...    
-<a name="headers"/>
-## Headers
+## Table of Contents  
 
 [Getting Started](https://github.com/coder-lgtm/docker-k8s#getting-started)
+
 [Prerequisites](https://github.com/coder-lgtm/docker-k8s#prerequisites)
+
 [Installation](https://github.com/coder-lgtm/docker-k8s#installation)
+
 [1. Clone this repo](https://github.com/coder-lgtm/docker-k8s#1-clone-this-repo)
+
 [2. Install Homebrew](https://github.com/coder-lgtm/docker-k8s#2-install-homebrew)
+
 [3. Install Python](https://github.com/coder-lgtm/docker-k8s#3-install-python)
+
 [4. Install Pip](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [5. Install dependency packages Flask and Requests](https://github.com/coder-lgtm/docker-k8s#5-install-dependency-packages-flask-and-requests)
+
 [Launch Your Web Applications!](https://github.com/coder-lgtm/docker-k8s#launch-your-web-applications)
+
 [5. Launch your Hello World web application](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [6. Launch your Weather API web application](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [Docker](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [7. Install Docker](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [8. Install Virtualbox](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [9. Validate the Docker installation](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [10. Connect to Docker](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [11. Check Docker processes](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [Built With](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 [Authors](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
+
 
 
 ## Getting Started
