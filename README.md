@@ -43,7 +43,7 @@ If Python is not installed, then run:
 brew install python
 ```
 
-4. To launch the python web application locally, you will need some dependencies such as Flask and Requests. Use Pip to install Flask and Requests. Check for Pip by checking for the version.
+4. To launch the Python web application locally, you will need the dependency packages Flask and Requests. Use Pip to install Flask and Requests. Check for Pip by checking for the version:
 ```
 pip --version
 ```
@@ -167,6 +167,11 @@ Confirm that the Docker machine is running:
 docker-machine ls 
 ```
 
+The expected outupt is shown below:
+```
+TBD
+```
+
 8. Connect to Docker
 
 Start the Docker machine if it is not running *TBD details*:
@@ -174,7 +179,7 @@ Start the Docker machine if it is not running *TBD details*:
 docker-machine start
 ```
 
-Connect to the Docker machine *TBD details*:
+Connect to the Docker machine *TBD what is docker-machine set to?*:
 ```
 docker-machine env eval $(docker-machine env)
 ```
