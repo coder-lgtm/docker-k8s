@@ -1,6 +1,6 @@
 # Docker and Kubernetes Hands-On Workshop for Beginners
 
-This project is a Workshop presented to Women in Technology. <DETAILS>
+This project is a Workshop presented to Women in Technology. **DETAILS**
 
 The Workshop will be presented in a virtual setting.
 
@@ -200,8 +200,8 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ## Authors
 
-* **Rutuja Joshi**
-* **Anita Carey**
+* [Rutuja Joshi](https://www.linkedin.com/in/rutuja/)
+* [Anita Carey](https://www.linkedin.com/in/anitacarey/)
 
 
 
