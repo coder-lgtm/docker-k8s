@@ -1,6 +1,6 @@
 # Docker and Kubernetes Hands-On Workshop for Beginners
 
-This project is a Workshop presented to Women in Technology. **DETAILS**
+This project is a Workshop presented to Women in Technology. **DETAILS TBD**
 
 The Workshop will be presented in a virtual setting.
 
@@ -19,65 +19,62 @@ The steps below were executed on Macbooks running MacOS Catalina.
 
 #### 1. Clone this repo
 ```
-git clone git@github.com:coder-lgtm/docker-k8s.git
+$ git clone git@github.com:coder-lgtm/docker-k8s.git
 ```
 ```
-cd docker-k8s
+$ cd docker-k8s
 ```
 
 #### 2. Install Homebrew
 ```
-./tools/brew_installation.sh
+$ ./tools/brew_installation.sh
+$ brew update
 ```
 
 #### 3. Install Python
 ```
-brew install python
+$ brew install python
 ```
 
 #### 4. Install Pip
 ```
-sudo easy_install pip
+$ sudo easy_install pip
 ```
 
 #### 5. Install dependency packages Flask and Requests
 ```
-sudo pip install flask
-pip install requests
+$ sudo pip install flask
+$ pip install requests
 ```
 
-### Launch your Web Applications!
+### Launch Your Web Applications!
 
-5. Launch your Hello World Web Application
-
-Make sure you are in the repo directory and run the following command:
+#### 5. Launch your Hello World web application
 ```
-python ./app/helloworld/hello_world.py 
+$ python ./app/helloworld/hello_world.py 
 ```
 
-Go to your browser and go to the below URL:
+Point your browser to the below URL:
 ```
 http://localhost:5000/
 ```
 
-The response should say:
+The expected response is:
 ```
 Hello World!
 ```
 
-6. Launch your Weather API Web Application
-
-Make sure you are in the repo directory and run the following command:
+#### 6. Launch your Weather API web application
 ```
-python ./app/weathervane/weather_vane.py
+$ python ./app/weathervane/weather_vane.py
 ```
 
-Go to your browser and go to the below URL, using the zip code of your choice (we are using the zip code for Redwood City, California):
+Point your browser to the below URL, using the zip code of your choice (we are using the zip code for Redwood City, California):
 ```
 http://localhost:5000/weather?zip=94065
 ```
 
-The response should look like the below (it may be unformatted):
+The expected response is something like the below (it may be unformatted):
 ```
 {
   "current": {
@@ -124,27 +121,22 @@ The response should look like the below (it may be unformatted):
 
 ### Docker 
 
-6. Install Docker and Virtualbox by running the commands below *TBD details*.
+#### 7. Install Docker
 
-Update Brew (this may take a few minutes):
 ```
-brew update
-```
-
-Install Docker packages:
-```
-brew install docker
-brew install docker-machine
+$ brew install docker
+$ brew install docker-machine
 ```
 
-Install Virtualbox:
+#### 8. Install Virtualbox
 ```
 brew cask install virtualbox
 ```
 
 If your Mac asks you for permission, go to System Preferences -> Security & Privacy -> General. You will see a message like `System software from developer "Oracle America, Inc." was blocked from loading`. Click on the lock in the lower left corner and click Allow, then run `brew cask install virtualbox` again.
 
-7.  Validate the Docker installation by launching the Docker machine named "default":
+#### 9. Validate the Docker installation
+Launch the Docker machine named "default":
 ```
 docker-machine create --driver virtualbox default
 ```
@@ -154,12 +146,12 @@ Confirm that the Docker machine is running:
 docker-machine ls 
 ```
 
-The expected outupt is shown below:
+The expected output is shown below:
 ```
 TBD
 ```
 
-8. Connect to Docker
+#### 10. Connect to Docker
 
 Start the Docker machine if it is not running *TBD details*:
 ```
@@ -171,12 +163,12 @@ Connect to the Docker machine *TBD what is docker-machine set to?*:
 docker-machine env eval $(docker-machine env)
 ```
 
-9. Check if there are any running processes (there will be none and we will launch one during the Workshop!):
+#### 11. Check Docker processes
 ```
 docker ps
 ```
 
-The expected output is shown below:
+There should be no running processes and we will launch one during the workshop. The expected output is shown below:
 ```
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
