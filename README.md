@@ -1,6 +1,6 @@
 # Docker and Kubernetes Hands-On Workshop for Beginners
 
-This project is a Workshop presented to Women in Technology. **DETAILS TBD**
+This project is a Workshop presented to Women in Technology on XXX, XX, 2020. **TBD**
 
 The Workshop will be presented in a virtual setting.
 
@@ -218,9 +218,9 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ## Built With
 
-* [Python](https://www.python.org/)
-* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-* [Docker Engine](https://docs.docker.com/engine/)
+* [Python](https://www.python.org/) - interpreted, high-level general purpose programming language
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) - micro web framework written in Python
+* [Docker Engine](https://docs.docker.com/engine/) - open-source containerization technology
 
 ## Authors
 
