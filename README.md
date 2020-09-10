@@ -62,8 +62,6 @@ The steps below were executed on Macbooks running MacOS Catalina.
 #### 1. Clone this repo
 ```
 $ git clone git@github.com:coder-lgtm/docker-k8s.git
-```
-```
 $ cd docker-k8s
 ```
 
@@ -172,7 +170,7 @@ $ brew install docker-machine
 
 #### 9. Install Virtualbox
 ```
-brew cask install virtualbox
+$ brew cask install virtualbox
 ```
 
 If your Mac asks you for permission, go to System Preferences -> Security & Privacy -> General. You will see a message like `System software from developer "Oracle America, Inc." was blocked from loading`. Click on the lock in the lower left corner and click Allow, then run `brew cask install virtualbox` again.
@@ -180,12 +178,12 @@ If your Mac asks you for permission, go to System Preferences -> Security & Priv
 #### 10. Validate the Docker installation
 Launch the Docker machine named "default":
 ```
-docker-machine create --driver virtualbox default
+$ docker-machine create --driver virtualbox default
 ```
 
 Confirm that the Docker machine is running:
 ```
-docker-machine ls 
+$ docker-machine ls 
 ```
 
 The expected output is shown below:
@@ -197,17 +195,17 @@ TBD
 
 Start the Docker machine if it is not running *TBD details*:
 ```
-docker-machine start
+$ docker-machine start
 ```
 
 Connect to the Docker machine *TBD what is docker-machine set to?*:
 ```
-docker-machine env eval $(docker-machine env)
+$ docker-machine env eval $(docker-machine env)
 ```
 
 #### 12. Check Docker processes
 ```
-docker ps
+$ docker ps
 ```
 
 There should be no running processes and we will launch one during the workshop. The expected output is shown below:
