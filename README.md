@@ -43,9 +43,18 @@ If Python is not installed, then run:
 brew install python
 ```
 
-4. To launch the python web application locally, you will need some dependencies such as Flask and Requests. Install Pip, Flask, and Requests with the commands below:
+4. To launch the python web application locally, you will need some dependencies such as Flask and Requests. Use Pip to install Flask and Requests. Check for Pip by checking for the version.
+```
+pip --version
+```
+
+If Pip is not installed, then run:
 ```
 sudo easy_install pip
+```
+
+Install Flask and Requests with the commands below:
+```
 sudo pip install flask
 pip install requests
 ```
@@ -79,7 +88,7 @@ Go to your browser and go to the below URL, using the zip code of your choice (w
 http://localhost:5000/weather?zip=94065
 ```
 
-The response should look like the below:
+The response should look like the below (it may be unformatted):
 ```
 {
   "current": {
