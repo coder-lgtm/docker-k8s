@@ -36,10 +36,11 @@ The Workshop will be presented in a virtual setting.
 
 [10. Validate the Docker installation](https://github.com/coder-lgtm/docker-k8s#10-validate-the-docker-installation)
 
-[11. Connect to Docker](https://github.com/coder-lgtm/docker-k8s#11-connect-to-docker)
+[11. Set up the Docker CLI Environment](https://github.com/coder-lgtm/docker-k8s#11-set-up-the-docker-cli-environment)
 
 [12. Check Docker processes](https://github.com/coder-lgtm/docker-k8s#12-check-docker-processes)
 
+[13. ]
 [Built With](https://github.com/coder-lgtm/docker-k8s#built-with)
 
 [Authors](https://github.com/coder-lgtm/docker-k8s#authors)
@@ -203,7 +204,7 @@ If your Docker machine did not start, run the start command below:
 $ docker-machine start
 ```
 
-#### 11. Set up the Docker CLI environment variables
+#### 11. Set up the Docker CLI Environment
 ```
 $ docker-machine env
 $ env eval $(docker-machine env)
@@ -219,7 +220,13 @@ There should be no running processes and we will launch one during the workshop.
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
+#### 13. (Optional) Set Up Google Cloud Project 
+We will demonstrate Kubernetes by using GCP project. We have set up a basic tier Google Cloud Project using the instructions at:
+https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project
 
+We will be using a 3-Node cluster as below:
+
+TBD
 
 
 ## Built With
