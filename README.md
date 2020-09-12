@@ -60,8 +60,8 @@ The steps below were executed on Macbooks running MacOS Catalina.
 
 Steps for Windows and Chromebooks will be forthcoming. If you have questions, please contact the authors at the below:
 
-Rutuja Joshi rutujaj@gmail.com
-Anita Carey anitacarey1101@gmail.com
+* Rutuja Joshi rutujaj@gmail.com
+* Anita Carey anitacarey1101@gmail.com
 
 
 ### Installation
