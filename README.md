@@ -1,6 +1,6 @@
 # Docker and Kubernetes Hands-On Workshop for Beginners
 
-This project is a Workshop presented to Women in Technology on XXX, XX, 2020. **TBD**
+This project is a Workshop presented to Women in Technology World Series on November 20, 2020.
 
 The Workshop will be presented in a virtual setting.
 
