@@ -40,7 +40,8 @@ The Workshop will be presented in a virtual setting.
 
 [12. Check Docker processes](https://github.com/coder-lgtm/docker-k8s#12-check-docker-processes)
 
-[13. ]
+[13. (Optional) Set Up Google Cloud Project](https://github.com/coder-lgtm/docker-k8s#13-optional-set-up-google-cloud-project)
+
 [Built With](https://github.com/coder-lgtm/docker-k8s#built-with)
 
 [Authors](https://github.com/coder-lgtm/docker-k8s#authors)
