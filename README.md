@@ -56,6 +56,11 @@ It is advisable but not mandatory that you have performed these steps beforehand
 
 The steps below were executed on Macbooks running MacOS Catalina.
 
+Steps for Windows and Chromebooks will be forthcoming. If you have questions, please contact the authors at the below:
+
+Rutuja Joshi rutujaj@gmail.com
+Anita Carey anitacarey1101@gmail.com
+
 
 ### Installation
 
@@ -169,6 +174,7 @@ $ brew install docker-machine
 ```
 
 #### 9. Install Virtualbox
+The Virtualbox is the Virtual Machine where your Docker engine will run.
 ```
 $ brew cask install virtualbox
 ```
@@ -176,7 +182,7 @@ $ brew cask install virtualbox
 If your Mac asks you for permission, go to System Preferences -> Security & Privacy -> General. You will see a message like `System software from developer "Oracle America, Inc." was blocked from loading`. Click on the lock in the lower left corner and click Allow, then run `brew cask install virtualbox` again.
 
 #### 10. Validate the Docker installation
-Launch the Docker machine named "default":
+Create the Docker machine named "default" (this command also starts the Docker machine):
 ```
 $ docker-machine create --driver virtualbox default
 ```
@@ -186,21 +192,21 @@ Confirm that the Docker machine is running:
 $ docker-machine ls 
 ```
 
-The expected output is shown below:
+The expected output is shown below (with your different private IP):
 ```
-TBD
+NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER      ERRORS
+default   *        virtualbox   Running   tcp://192.168.99.101:2376           v19.03.12
 ```
 
-#### 11. Connect to Docker
-
-Start the Docker machine if it is not running *TBD details*:
+If your Docker machine did not start, run the start command below:
 ```
 $ docker-machine start
 ```
 
-Connect to the Docker machine *TBD what is docker-machine set to?*:
+#### 11. Set up the Docker CLI environment variables
 ```
-$ docker-machine env eval $(docker-machine env)
+$ docker-machine env
+$ env eval $(docker-machine env)
 ```
 
 #### 12. Check Docker processes
