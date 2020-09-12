@@ -222,10 +222,10 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 ```
 
 #### 13. (Optional) Set Up Google Cloud Project 
-We will demonstrate Kubernetes by using GCP project. We have set up a basic tier Google Cloud Project using the instructions at:
+We will demonstrate Kubernetes by using Google Cloud Project. We have set up a basic tier GCP by using the instructions at:
 https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project
 
-We will be using a 3-Node cluster as below:
+We will be using a 3-Node cluster as shown below:
 
 TBD
 
