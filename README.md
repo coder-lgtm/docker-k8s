@@ -227,7 +227,7 @@ https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-pr
 
 We will be using a 3-Node cluster as shown below:
 
-TBD
+![GCP account screen shot](images/gcp_example.png)
 
 
 ## Built With
