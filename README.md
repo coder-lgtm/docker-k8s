@@ -261,14 +261,36 @@ $ docker run -d -P weather-vane
 $ docker ps
 ```
 
-You should see output like the below for the Docker conntainers that you just launched.
+You should see output like the below for the Docker containers that you just launched.
 ```
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                     NAMES
 138ffc6438a7        weather-vane        "python weather_vane…"   4 seconds ago       Up 4 seconds        0.0.0.0:32771->5000/tcp   zen_greider
 70f6c6dbfde7        hello-world         "python hello_world.…"   9 seconds ago       Up 9 seconds        0.0.0.0:32770->5000/tcp   flamboyant_blackwell
 ```
 
-#### C10. Enter the running Docker container
+#### C10. Check your applications on your browser
+
+Find your Docker IP:
+````
+$ docker-machine url
+````
+
+You will get something like the below - this is the IP address that your Docker containers are running on.
+````
+tcp://192.168.99.101:2376
+````
+
+Note in section C9 that the port number for the "hello-world" image is 32770. Point your browser to your Docker container IP and your port. In this demo, the value is "192.168.99.101:32770".
+
+![Docker hello world screen shot](images/docker_hello_world.png)
+
+
+Note in section C9 that the port number for the "weather-vane" image is 32771. Point your browser to your Docker container IP, your port, and the weather endpoint (we are using 94065 for Redwood City). In this demo, the value is "192.168.99.101:32771/weather?zip=94065".
+
+![Docker weather vane screen shot](images/docker_weather_vane.png)
+
+
+#### C11. Enter the running Docker container
 ```
 $ docker exec -it <container id> /bin/sh
 ```
