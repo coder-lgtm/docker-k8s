@@ -14,7 +14,7 @@ The Workshop will be presented in a virtual setting.
 
 [Demo 1: Launch Your Web Applications on your local machine](https://github.com/coder-lgtm/docker-k8s#demo-1-launch-your-web-applications-on-your-local-machine)
 
-[Demo 2: Docker - Launch your Web applications in Docker](https://github.com/coder-lgtm/docker-k8s#demo-2-docker---launch-your-web-applications-in-docker)
+[Demo 2: Dockerize your Web application]()
 
 [Demo 3: Kubernetes - Orchestrate your Web applications using Kubernetes](https://github.com/coder-lgtm/docker-k8s#demo-3-kubernetes---orchestrate-your-web-applications-using-kubernetes)
 
@@ -142,7 +142,7 @@ The expected response is something like the below (it may be unformatted):
 }
 ```
 
-### Demo 2: Docker - Launch your Web applications in Docker 
+### Demo 2: Dockerize your Web application
 
 #### C1. Install Docker
 
@@ -251,17 +251,17 @@ Find your Docker IP:
 $ docker-machine url
 ````
 
-You will get something like the below - this is the IP address that your Docker containers are running on.
+You will get something like the below - your IP will be different. This is the IP address that your Docker containers are running on.
 ````
 tcp://192.168.99.101:2376
 ````
 
-Note in section C9 in the "PORTS" column that the port number for the "hello-world" image is 32770. Point your browser to your Docker container IP and your port. In this demo, the URL is "192.168.99.101:32770".
+Note in section C9 in the "PORTS" column that the port number for the "hello-world" image is 32770. Point your browser to your Docker container IP and your port. In this screen shot, the URL is "192.168.99.101:32770".
 
 ![Docker hello world screen shot](images/docker_hello_world.png)
 
 
-Note in section C9 in the "PORTS" column that the port number for the "weather-vane" image is 32771. Point your browser to your Docker container IP, your port, and the weather endpoint (we are using 94065 for Redwood City). In this demo, the URL is "192.168.99.101:32771/weather?zip=94065".
+Note in section C9 in the "PORTS" column that the port number for the "weather-vane" image is 32771. Point your browser to your Docker container IP, your port, and the weather endpoint (we are using 94065 for Redwood City). In this screen shot, the URL is "192.168.99.101:32771/weather?zip=94065".
 
 ![Docker weather vane screen shot](images/docker_weather_vane.png)
 
