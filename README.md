@@ -285,7 +285,7 @@ We will be using a 3-Node cluster as shown below:
 #### D2. For accessing GCP project, you will need to install Google Cloud SDK (gcloud)
 Please follow these instructions based on your OS: https://cloud.google.com/sdk/docs/downloads-interactive
 
-##### Handy Shorthand for Kubectl (Kubernetes Command line tool)
+#### Handy Shorthand for Kubectl (Kubernetes Command line tool)
 ```
 $ alias k=kubectl
 ```
