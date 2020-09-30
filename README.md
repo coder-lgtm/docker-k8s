@@ -208,7 +208,7 @@ $ docker-machine start
 #### 11. Set up the Docker CLI Environment
 ```
 $ docker-machine env
-$ env eval $(docker-machine env)
+$ eval $(docker-machine env)
 ```
 
 #### 12. Check Docker processes
@@ -229,6 +229,9 @@ We will be using a 3-Node cluster as shown below:
 
 ![GCP account screen shot](images/gcp_example.png)
 
+#### 14. For accessing GCP project, you will need to install Google Cloud SDK (gcloud)
+Please follow these instructions based on your OS : https://cloud.google.com/sdk/docs/downloads-interactive
+
 
 ## Built With
 
@@ -241,6 +244,98 @@ We will be using a 3-Node cluster as shown below:
 * [Rutuja Joshi](https://www.linkedin.com/in/rutuja/)
 * [Anita Carey](https://www.linkedin.com/in/anitacarey/)
 
+## Useful Commands
 
+* Docker
 
+#### 1. Build Images
+```
+$ cd ./app/helloworld
+$ docker build -t hello-world -f ./docker/Dockerfile .
+```
 
+```
+$ cd ./app/weathervane
+$ docker build -t weather-vane -f ./docker/Dockerfile .
+```
+
+#### 2. Luanch Docker Containers
+```
+$ docker run -d -P hello-world
+```
+
+```
+$ docker run -d -P weather-vane
+```
+
+#### 3. List Docker Images
+```
+$ docker images
+```
+
+#### 4. List Docker Containers 
+```
+$ docker ps
+```
+
+#### 5. Enter the running docker container
+```
+$ docker exec -it <container id> /bin/sh
+```
+
+* Kubernetes
+
+#### Handy Shorthand for Kubectl (Kubernetes Command line tool)
+```
+$ alias k=kubectl
+```
+
+#### 1. Get Cluster Info
+```
+$ kubectl cluster-info 
+```
+
+#### 2. See whats running on the Kubernetes Cluster
+```
+$ kubectl get all
+```
+
+#### 3. Explore Nodes
+```
+$ kubectl get nodes -o wide
+```
+
+#### 4. Explore Pods
+```
+$ kubectl get nodes -o wide
+```
+
+#### 5. Explore Deployments
+```
+$ kubectl get deployments
+```
+
+#### 6. Create Deployment
+```
+$ kubectl create -f deployment.yaml 
+```
+
+#### 7. Expose Deployment as a Service
+```
+$ kubectl expose deployment  docker-k8s-demo --type=LoadBalancer --name=my-service-demo --port=5000
+```
+
+#### 8. Scale Deployment Up
+```
+$ kubectl scale deployment docker-k8s-demo --replicas=3
+```
+
+#### 9. Scale Deployment Down
+```
+$ kubectl scale deployment docker-k8s-demo --replicas=1
+```
+
+#### 10. Enter the running kubernetes pod 
+```
+$ kubectl exec -it <pod id> /bin/sh
+```

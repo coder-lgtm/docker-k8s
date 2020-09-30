@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-k8s-demo
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      plabel: weatherPod 
+  template:
+    metadata:
+      labels:
+        plabel: weatherPod 
+    spec:
+      containers:
+      - name: weathervane 
+        image: gcr.io/famous-cogency-281021/weather-vane-gcp 
+        ports:
+        - containerPort: 8080
