@@ -12,35 +12,13 @@ The Workshop will be presented in a virtual setting.
 
 [Installation](https://github.com/coder-lgtm/docker-k8s#installation)
 
-[1. Clone this repo](https://github.com/coder-lgtm/docker-k8s#1-clone-this-repo)
+[Installation](https://github.com/coder-lgtm/docker-k8s#installation)
 
-[2. Install Homebrew](https://github.com/coder-lgtm/docker-k8s#2-install-homebrew)
+[Demo 1: Launch Your Web Applications on your local machine] [https://github.com/coder-lgtm/docker-k8s#demo-1-launch-your-web-applications-on-your-local-machine]
 
-[3. Install Python](https://github.com/coder-lgtm/docker-k8s#3-install-python)
+[Demo 2: Docker - Launch your Web applications in Docker] [https://github.com/coder-lgtm/docker-k8s#demo-2-docker---launch-your-web-applications-in-docker]
 
-[4. Install Pip](https://github.com/coder-lgtm/docker-k8s#4-install-pip)
-
-[5. Install dependency packages Flask and Requests](https://github.com/coder-lgtm/docker-k8s#5-install-dependency-packages-flask-and-requests)
-
-[Launch Your Web Applications!](https://github.com/coder-lgtm/docker-k8s#launch-your-web-applications)
-
-[6. Launch your Hello World web application](https://github.com/coder-lgtm/docker-k8s#6-launch-your-hello-world-web-application)
-
-[7. Launch your Weather API web application](https://github.com/coder-lgtm/docker-k8s#7-launch-your-weather-api-web-application)
-
-[Docker](https://github.com/coder-lgtm/docker-k8s#docker)
-
-[8. Install Docker](https://github.com/coder-lgtm/docker-k8s#8-install-docker)
-
-[9. Install Virtualbox](https://github.com/coder-lgtm/docker-k8s#9-install-virtualbox)
-
-[10. Validate the Docker installation](https://github.com/coder-lgtm/docker-k8s#10-validate-the-docker-installation)
-
-[11. Set up the Docker CLI Environment](https://github.com/coder-lgtm/docker-k8s#11-set-up-the-docker-cli-environment)
-
-[12. Check Docker processes](https://github.com/coder-lgtm/docker-k8s#12-check-docker-processes)
-
-[13. (Optional) Set Up Google Cloud Project](https://github.com/coder-lgtm/docker-k8s#13-optional-set-up-google-cloud-project)
+[Demo 3: Kubernetes - Orchestrate your Web applications using Kubernetes] [https://github.com/coder-lgtm/docker-k8s#demo-3-kubernetes---orchestrate-your-web-applications-using-kubernetes]
 
 [Built With](https://github.com/coder-lgtm/docker-k8s#built-with)
 
