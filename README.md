@@ -66,37 +66,37 @@ Steps for Windows and Chromebooks will be forthcoming. If you have questions, pl
 
 ### Installation
 
-#### 1. Clone this repo
+#### A1. Clone this repo
 ```
 $ git clone git@github.com:coder-lgtm/docker-k8s.git
 $ cd docker-k8s
 ```
 
-#### 2. Install Homebrew
+#### A2. Install Homebrew
 ```
 $ ./tools/brew_installation.sh
 $ brew update
 ```
 
-#### 3. Install Python
+#### A3. Install Python
 ```
 $ brew install python
 ```
 
-#### 4. Install Pip
+#### A4. Install Pip
 ```
 $ sudo easy_install pip
 ```
 
-#### 5. Install dependency packages Flask and Requests
+#### A5. Install dependency packages Flask and Requests
 ```
 $ sudo pip install flask
 $ pip install requests
 ```
 
-### Launch Your Web Applications!
+### Demo 1: Launch Your Web Applications on your local machine
 
-#### 6. Launch your Hello World web application
+#### B1. Launch your Hello World web application
 ```
 $ python ./app/helloworld/hello_world.py 
 ```
@@ -111,7 +111,7 @@ The expected response is:
 Hello World!
 ```
 
-#### 7. Launch your Weather API web application
+#### B2. Launch your Weather API web application
 ```
 $ python ./app/weathervane/weather_vane.py
 ```
@@ -166,16 +166,16 @@ The expected response is something like the below (it may be unformatted):
 }
 ```
 
-### Docker 
+### Demo 2: Docker - Launch your Web applications in Docker 
 
-#### 8. Install Docker
+#### C1. Install Docker
 
 ```
 $ brew install docker
 $ brew install docker-machine
 ```
 
-#### 9. Install Virtualbox
+#### C2. Install Virtualbox
 The Virtualbox is the Virtual Machine where your Docker engine will run.
 ```
 $ brew cask install virtualbox
@@ -183,7 +183,7 @@ $ brew cask install virtualbox
 
 If your Mac asks you for permission, go to System Preferences -> Security & Privacy -> General. You will see a message like `System software from developer "Oracle America, Inc." was blocked from loading`. Click on the lock in the lower left corner and click Allow, then run `brew cask install virtualbox` again.
 
-#### 10. Validate the Docker installation
+#### C3. Validate the Docker installation
 Create the Docker machine named "default" (this command also starts the Docker machine):
 ```
 $ docker-machine create --driver virtualbox default
@@ -205,13 +205,13 @@ If your Docker machine did not start, run the start command below:
 $ docker-machine start
 ```
 
-#### 11. Set up the Docker CLI Environment
+#### C4. Set up the Docker CLI Environment
 ```
 $ docker-machine env
 $ eval $(docker-machine env)
 ```
 
-#### 12. Check Docker processes
+#### C5. Check Docker processes
 ```
 $ docker ps
 ```
@@ -221,7 +221,45 @@ There should be no running processes and we will launch one during the workshop.
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
-#### 13. (Optional) Set Up Google Cloud Project 
+#### C6. Build Docker images
+```
+$ cd ./app/helloworld
+$ docker build -t hello-world -f ./docker/Dockerfile .
+```
+
+```
+$ cd ./app/weathervane
+$ docker build -t weather-vane -f ./docker/Dockerfile .
+```
+
+#### C7. Launch Docker containers
+```
+$ docker run -d -P hello-world
+```
+
+```
+$ docker run -d -P weather-vane
+```
+
+#### C8. List Docker images
+```
+$ docker images
+```
+
+#### C9. List Docker containers 
+```
+$ docker ps
+```
+
+#### C10. Enter the running Docker container
+```
+$ docker exec -it <container id> /bin/sh
+```
+
+
+### Demo 3: Kubernetes - Orchestrate your Web applications using Kubernetes
+
+#### D1. (Optional) Set Up Google Cloud Project 
 We will demonstrate Kubernetes by using Google Cloud Project. We have set up a basic tier GCP by using the instructions at:
 https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project
 
@@ -229,8 +267,63 @@ We will be using a 3-Node cluster as shown below:
 
 ![GCP account screen shot](images/gcp_example.png)
 
-#### 14. For accessing GCP project, you will need to install Google Cloud SDK (gcloud)
+#### D2. For accessing GCP project, you will need to install Google Cloud SDK (gcloud)
 Please follow these instructions based on your OS : https://cloud.google.com/sdk/docs/downloads-interactive
+
+#### Handy Shorthand for Kubectl (Kubernetes Command line tool)
+```
+$ alias k=kubectl
+```
+
+#### D3. Get Cluster Info
+```
+$ kubectl cluster-info 
+```
+
+#### D4. See whats running on the Kubernetes Cluster
+```
+$ kubectl get all
+```
+
+#### D5. Explore Nodes
+```
+$ kubectl get nodes -o wide
+```
+
+#### D6. Explore Pods
+```
+$ kubectl get nodes -o wide
+```
+
+#### D7. Explore Deployments
+```
+$ kubectl get deployments
+```
+
+#### D8. Create Deployment
+```
+$ kubectl create -f deployment.yaml 
+```
+
+#### D9. Expose Deployment as a Service
+```
+$ kubectl expose deployment  docker-k8s-demo --type=LoadBalancer --name=my-service-demo --port=5000
+```
+
+#### D10. Scale Deployment Up
+```
+$ kubectl scale deployment docker-k8s-demo --replicas=3
+```
+
+#### D11. Scale Deployment Down
+```
+$ kubectl scale deployment docker-k8s-demo --replicas=1
+```
+
+#### D12. Enter the running kubernetes pod 
+```
+$ kubectl exec -it <pod id> /bin/sh
+```
 
 
 ## Built With
@@ -244,98 +337,3 @@ Please follow these instructions based on your OS : https://cloud.google.com/sdk
 * [Rutuja Joshi](https://www.linkedin.com/in/rutuja/)
 * [Anita Carey](https://www.linkedin.com/in/anitacarey/)
 
-## Useful Commands
-
-* Docker
-
-#### 1. Build Images
-```
-$ cd ./app/helloworld
-$ docker build -t hello-world -f ./docker/Dockerfile .
-```
-
-```
-$ cd ./app/weathervane
-$ docker build -t weather-vane -f ./docker/Dockerfile .
-```
-
-#### 2. Luanch Docker Containers
-```
-$ docker run -d -P hello-world
-```
-
-```
-$ docker run -d -P weather-vane
-```
-
-#### 3. List Docker Images
-```
-$ docker images
-```
-
-#### 4. List Docker Containers 
-```
-$ docker ps
-```
-
-#### 5. Enter the running docker container
-```
-$ docker exec -it <container id> /bin/sh
-```
-
-* Kubernetes
-
-#### Handy Shorthand for Kubectl (Kubernetes Command line tool)
-```
-$ alias k=kubectl
-```
-
-#### 1. Get Cluster Info
-```
-$ kubectl cluster-info 
-```
-
-#### 2. See whats running on the Kubernetes Cluster
-```
-$ kubectl get all
-```
-
-#### 3. Explore Nodes
-```
-$ kubectl get nodes -o wide
-```
-
-#### 4. Explore Pods
-```
-$ kubectl get nodes -o wide
-```
-
-#### 5. Explore Deployments
-```
-$ kubectl get deployments
-```
-
-#### 6. Create Deployment
-```
-$ kubectl create -f deployment.yaml 
-```
-
-#### 7. Expose Deployment as a Service
-```
-$ kubectl expose deployment  docker-k8s-demo --type=LoadBalancer --name=my-service-demo --port=5000
-```
-
-#### 8. Scale Deployment Up
-```
-$ kubectl scale deployment docker-k8s-demo --replicas=3
-```
-
-#### 9. Scale Deployment Down
-```
-$ kubectl scale deployment docker-k8s-demo --replicas=1
-```
-
-#### 10. Enter the running kubernetes pod 
-```
-$ kubectl exec -it <pod id> /bin/sh
-```
