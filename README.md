@@ -232,7 +232,22 @@ $ cd ./app/weathervane
 $ docker build -t weather-vane -f ./docker/Dockerfile .
 ```
 
-#### C7. Launch Docker containers
+#### C7. List Docker images
+```
+$ docker images
+```
+
+You should see output like the below for the Docker images that you just built.
+
+```
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+weather-vane        latest              c03f59b9ab99        4 seconds ago       55.6MB
+hello-world         latest              6b8eff18876c        18 seconds ago      52.3MB
+<none>              <none>              a592caad259b        2 weeks ago         40.8MB
+python              3.6-alpine          176f50d88b04        3 weeks ago         40.8MB
+```
+
+#### C8. Launch Docker containers
 ```
 $ docker run -d -P hello-world
 ```
@@ -241,14 +256,16 @@ $ docker run -d -P hello-world
 $ docker run -d -P weather-vane
 ```
 
-#### C8. List Docker images
-```
-$ docker images
-```
-
 #### C9. List Docker containers 
 ```
 $ docker ps
+```
+
+You should see output like the below for the Docker conntainers that you just launched.
+```
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                     NAMES
+138ffc6438a7        weather-vane        "python weather_vane…"   4 seconds ago       Up 4 seconds        0.0.0.0:32771->5000/tcp   zen_greider
+70f6c6dbfde7        hello-world         "python hello_world.…"   9 seconds ago       Up 9 seconds        0.0.0.0:32770->5000/tcp   flamboyant_blackwell
 ```
 
 #### C10. Enter the running Docker container
