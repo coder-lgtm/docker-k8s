@@ -34,7 +34,7 @@ It is advisable but not mandatory that you have performed these steps beforehand
 
 The steps below were executed on Macbooks running MacOS Catalina.
 
-Steps for Windows and Chromebooks will be forthcoming. If you have questions, please contact the authors at the below:
+If you have questions, please contact the authors at the below emails:
 
 * Rutuja Joshi rutujaj@gmail.com
 * Anita Carey anitacarey1101@gmail.com
