@@ -117,7 +117,7 @@ $ eval $(docker-machine env)
 
 ### Demo 1: Launch Your Web Applications on your local machine
 
-#### B1. Launch your Hello World web application
+#### 1. Launch your Hello World web application
 ```
 $ python ./app/helloworld/hello_world.py 
 ```
@@ -132,7 +132,7 @@ The expected response is:
 Hello World!
 ```
 
-#### B2. Launch your Weather API web application
+#### 2. Launch your Weather API web application
 ```
 $ python ./app/weathervane/weather_vane.py
 ```
@@ -259,12 +259,12 @@ You will get something like the below - your IP will be different. This is the I
 tcp://192.168.99.101:2376
 ````
 
-Note in section C9 in the "PORTS" column that the port number for the "hello-world" image is 32770. Point your browser to your Docker container IP and your port. In this screen shot, the URL is "192.168.99.101:32770".
+Note in section 5 in the "PORTS" column that the port number for the "hello-world" image is 32770. Point your browser to your Docker container IP and your port. In this screen shot, the URL is "192.168.99.101:32770".
 
 ![Docker hello world screen shot](images/docker_hello_world.png)
 
 
-Note in section C9 in the "PORTS" column that the port number for the "weather-vane" image is 32771. Point your browser to your Docker container IP, your port, and the weather endpoint (we are using 94065 for Redwood City). In this screen shot, the URL is "192.168.99.101:32771/weather?zip=94065".
+Note in section 5 in the "PORTS" column that the port number for the "weather-vane" image is 32771. Point your browser to your Docker container IP, your port, and the weather endpoint (we are using 94065 for Redwood City). In this screen shot, the URL is "192.168.99.101:32771/weather?zip=94065".
 
 ![Docker weather vane screen shot](images/docker_weather_vane.png)
 
