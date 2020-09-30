@@ -14,7 +14,7 @@ The Workshop will be presented in a virtual setting.
 
 [Demo 1: Launch Your Web Applications on your local machine](https://github.com/coder-lgtm/docker-k8s#demo-1-launch-your-web-applications-on-your-local-machine)
 
-[Demo 2: Dockerize your Web application]()
+[Demo 2: Dockerize your Web application](https://github.com/coder-lgtm/docker-k8s#demo-2-dockerize-your-web-application)
 
 [Demo 3: Kubernetes - Orchestrate your Web applications using Kubernetes](https://github.com/coder-lgtm/docker-k8s#demo-3-kubernetes---orchestrate-your-web-applications-using-kubernetes)
 
