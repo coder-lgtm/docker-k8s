@@ -268,7 +268,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 70f6c6dbfde7        hello-world         "python hello_world.…"   9 seconds ago       Up 9 seconds        0.0.0.0:32770->5000/tcp   flamboyant_blackwell
 ```
 
-#### C10. Check your applications on your browser
+#### C10. Check your Dockerized applications on your browser
 
 Find your Docker IP:
 ````
@@ -280,12 +280,12 @@ You will get something like the below - this is the IP address that your Docker 
 tcp://192.168.99.101:2376
 ````
 
-Note in section C9 that the port number for the "hello-world" image is 32770. Point your browser to your Docker container IP and your port. In this demo, the value is "192.168.99.101:32770".
+Note in section C9 in the "PORTS" column that the port number for the "hello-world" image is 32770. Point your browser to your Docker container IP and your port. In this demo, the URL is "192.168.99.101:32770".
 
 ![Docker hello world screen shot](images/docker_hello_world.png)
 
 
-Note in section C9 that the port number for the "weather-vane" image is 32771. Point your browser to your Docker container IP, your port, and the weather endpoint (we are using 94065 for Redwood City). In this demo, the value is "192.168.99.101:32771/weather?zip=94065".
+Note in section C9 in the "PORTS" column that the port number for the "weather-vane" image is 32771. Point your browser to your Docker container IP, your port, and the weather endpoint (we are using 94065 for Redwood City). In this demo, the URL is "192.168.99.101:32771/weather?zip=94065".
 
 ![Docker weather vane screen shot](images/docker_weather_vane.png)
 
@@ -307,9 +307,9 @@ We will be using a 3-Node cluster as shown below:
 ![GCP account screen shot](images/gcp_example.png)
 
 #### D2. For accessing GCP project, you will need to install Google Cloud SDK (gcloud)
-Please follow these instructions based on your OS : https://cloud.google.com/sdk/docs/downloads-interactive
+Please follow these instructions based on your OS: https://cloud.google.com/sdk/docs/downloads-interactive
 
-#### Handy Shorthand for Kubectl (Kubernetes Command line tool)
+##### Handy Shorthand for Kubectl (Kubernetes Command line tool)
 ```
 $ alias k=kubectl
 ```
@@ -319,7 +319,7 @@ $ alias k=kubectl
 $ kubectl cluster-info 
 ```
 
-#### D4. See whats running on the Kubernetes Cluster
+#### D4. See what's running on the Kubernetes Cluster
 ```
 $ kubectl get all
 ```
@@ -346,7 +346,7 @@ $ kubectl create -f deployment.yaml
 
 #### D9. Expose Deployment as a Service
 ```
-$ kubectl expose deployment  docker-k8s-demo --type=LoadBalancer --name=my-service-demo --port=5000
+$ kubectl expose deployment docker-k8s-demo --type=LoadBalancer --name=my-service-demo --port=5000
 ```
 
 #### D10. Scale Deployment Up
