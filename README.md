@@ -41,34 +41,79 @@ Steps for Windows and Chromebooks will be forthcoming. If you have questions, pl
 
 
 ### Installation
+This workshop assumes that the steps in this Installation section have been run and the environment is set up.
 
-#### A1. Clone this repo
+#### 1. Clone this repo
 ```
 $ git clone git@github.com:coder-lgtm/docker-k8s.git
 $ cd docker-k8s
 ```
 
-#### A2. Install Homebrew
+#### 2. Install Homebrew
 ```
 $ ./tools/brew_installation.sh
 $ brew update
 ```
 
-#### A3. Install Python
+#### 3. Install Python
 ```
 $ brew install python
 ```
 
-#### A4. Install Pip
+#### 4. Install Pip
 ```
 $ sudo easy_install pip
 ```
 
-#### A5. Install dependency packages Flask and Requests
+#### 5. Install dependency packages Flask and Requests
 ```
 $ sudo pip install flask
 $ pip install requests
 ```
+
+#### 6. Install Docker
+
+```
+$ brew install docker
+$ brew install docker-machine
+```
+
+#### 7. Install Virtualbox
+The Virtualbox is the Virtual Machine where your Docker engine will run.
+```
+$ brew cask install virtualbox
+```
+
+If your Mac asks you for permission, go to System Preferences -> Security & Privacy -> General. You will see a message like `System software from developer "Oracle America, Inc." was blocked from loading`. Click on the lock in the lower left corner and click Allow, then run `brew cask install virtualbox` again.
+
+#### 8. Validate the Docker installation
+Create the Docker machine named "default" (this command also starts the Docker machine):
+```
+$ docker-machine create --driver virtualbox default
+```
+
+Confirm that the Docker machine is running:
+```
+$ docker-machine ls 
+```
+
+The expected output is shown below (with your different private IP):
+```
+NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER      ERRORS
+default   *        virtualbox   Running   tcp://192.168.99.101:2376           v19.03.12
+```
+
+If your Docker machine did not start, run the start command below:
+```
+$ docker-machine start
+```
+
+#### 9. Set up the Docker CLI Environment
+```
+$ docker-machine env
+$ eval $(docker-machine env)
+```
+
 
 ### Demo 1: Launch Your Web Applications on your local machine
 
@@ -144,50 +189,8 @@ The expected response is something like the below (it may be unformatted):
 
 ### Demo 2: Dockerize your Web application
 
-#### C1. Install Docker
 
-```
-$ brew install docker
-$ brew install docker-machine
-```
-
-#### C2. Install Virtualbox
-The Virtualbox is the Virtual Machine where your Docker engine will run.
-```
-$ brew cask install virtualbox
-```
-
-If your Mac asks you for permission, go to System Preferences -> Security & Privacy -> General. You will see a message like `System software from developer "Oracle America, Inc." was blocked from loading`. Click on the lock in the lower left corner and click Allow, then run `brew cask install virtualbox` again.
-
-#### C3. Validate the Docker installation
-Create the Docker machine named "default" (this command also starts the Docker machine):
-```
-$ docker-machine create --driver virtualbox default
-```
-
-Confirm that the Docker machine is running:
-```
-$ docker-machine ls 
-```
-
-The expected output is shown below (with your different private IP):
-```
-NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER      ERRORS
-default   *        virtualbox   Running   tcp://192.168.99.101:2376           v19.03.12
-```
-
-If your Docker machine did not start, run the start command below:
-```
-$ docker-machine start
-```
-
-#### C4. Set up the Docker CLI Environment
-```
-$ docker-machine env
-$ eval $(docker-machine env)
-```
-
-#### C5. Check Docker processes
+#### 1. Check Docker processes
 ```
 $ docker ps
 ```
@@ -197,7 +200,7 @@ There should be no running processes and we will launch one during the workshop.
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
-#### C6. Build Docker images
+#### 2. Build Docker images
 ```
 $ cd ./app/helloworld
 $ docker build -t hello-world -f ./docker/Dockerfile .
@@ -208,7 +211,7 @@ $ cd ./app/weathervane
 $ docker build -t weather-vane -f ./docker/Dockerfile .
 ```
 
-#### C7. List Docker images
+#### 3. List Docker images
 ```
 $ docker images
 ```
@@ -223,7 +226,7 @@ hello-world         latest              6b8eff18876c        18 seconds ago      
 python              3.6-alpine          176f50d88b04        3 weeks ago         40.8MB
 ```
 
-#### C8. Launch Docker containers
+#### 4. Launch Docker containers
 ```
 $ docker run -d -P hello-world
 ```
@@ -232,7 +235,7 @@ $ docker run -d -P hello-world
 $ docker run -d -P weather-vane
 ```
 
-#### C9. List Docker containers 
+#### 5. List Docker containers 
 ```
 $ docker ps
 ```
@@ -244,7 +247,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 70f6c6dbfde7        hello-world         "python hello_world.…"   9 seconds ago       Up 9 seconds        0.0.0.0:32770->5000/tcp   flamboyant_blackwell
 ```
 
-#### C10. Check your Dockerized applications on your browser
+#### 6. Check your Dockerized applications on your browser
 
 Find your Docker IP:
 ````
@@ -266,7 +269,7 @@ Note in section C9 in the "PORTS" column that the port number for the "weather-v
 ![Docker weather vane screen shot](images/docker_weather_vane.png)
 
 
-#### C11. Enter the running Docker container
+#### 7. Enter the running Docker container
 ```
 $ docker exec -it <container id> /bin/sh
 ```
@@ -274,7 +277,7 @@ $ docker exec -it <container id> /bin/sh
 
 ### Demo 3: Kubernetes - Orchestrate your Web applications using Kubernetes
 
-#### D1. (Optional) Set Up Google Cloud Project 
+#### 1. (Optional) Set Up Google Cloud Project 
 We will demonstrate Kubernetes by using Google Cloud Project. We have set up a basic tier GCP by using the instructions at:
 https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project
 
@@ -282,7 +285,7 @@ We will be using a 3-Node cluster as shown below:
 
 ![GCP account screen shot](images/gcp_example.png)
 
-#### D2. For accessing GCP project, you will need to install Google Cloud SDK (gcloud)
+#### 2. For accessing GCP project, you will need to install Google Cloud SDK (gcloud)
 Please follow these instructions based on your OS: https://cloud.google.com/sdk/docs/downloads-interactive
 
 #### Handy Shorthand for Kubectl (Kubernetes Command line tool)
@@ -290,52 +293,52 @@ Please follow these instructions based on your OS: https://cloud.google.com/sdk/
 $ alias k=kubectl
 ```
 
-#### D3. Get Cluster Info
+#### 3. Get Cluster Info
 ```
 $ kubectl cluster-info 
 ```
 
-#### D4. See what's running on the Kubernetes Cluster
+#### 4. See what's running on the Kubernetes Cluster
 ```
 $ kubectl get all
 ```
 
-#### D5. Explore Nodes
+#### 5. Explore Nodes
 ```
 $ kubectl get nodes -o wide
 ```
 
-#### D6. Explore Pods
+#### 6. Explore Pods
 ```
 $ kubectl get nodes -o wide
 ```
 
-#### D7. Explore Deployments
+#### 7. Explore Deployments
 ```
 $ kubectl get deployments
 ```
 
-#### D8. Create Deployment
+#### 8. Create Deployment
 ```
 $ kubectl create -f deployment.yaml 
 ```
 
-#### D9. Expose Deployment as a Service
+#### 9. Expose Deployment as a Service
 ```
 $ kubectl expose deployment docker-k8s-demo --type=LoadBalancer --name=my-service-demo --port=5000
 ```
 
-#### D10. Scale Deployment Up
+#### 10. Scale Deployment Up
 ```
 $ kubectl scale deployment docker-k8s-demo --replicas=3
 ```
 
-#### D11. Scale Deployment Down
+#### 11. Scale Deployment Down
 ```
 $ kubectl scale deployment docker-k8s-demo --replicas=1
 ```
 
-#### D12. Enter the running kubernetes pod 
+#### 12. Enter the running kubernetes pod 
 ```
 $ kubectl exec -it <pod id> /bin/sh
 ```
