@@ -45,7 +45,7 @@ This workshop assumes that the steps in this Installation section have been run 
 
 #### 1. Clone this repo
 ```
-$ git clone git@github.com:coder-lgtm/docker-k8s.git
+$ git clone https://github.com/coder-lgtm/docker-k8s.git
 $ cd docker-k8s
 ```
 
