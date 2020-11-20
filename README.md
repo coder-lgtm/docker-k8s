@@ -308,34 +308,34 @@ $ kubectl get all
 $ kubectl get nodes -o wide
 ```
 
-#### 6. Explore Pods
-```
-$ kubectl get nodes -o wide
-```
-
-#### 7. Explore Deployments
+#### 6. Explore Deployments
 ```
 $ kubectl get deployments
 ```
 
-#### 8. Create Deployment
+#### 7. Create Deployment
 ```
 $ kubectl create -f deployment.yaml 
 ```
 
-#### 9. Expose Deployment as a Service
+#### 8. Expose Deployment as a Service
 ```
 $ kubectl expose deployment docker-k8s-demo --type=LoadBalancer --name=my-service-demo --port=5000
 ```
 
-#### 10. Scale Deployment Up
+#### 9. Scale Deployment Up
 ```
 $ kubectl scale deployment docker-k8s-demo --replicas=3
 ```
 
-#### 11. Scale Deployment Down
+#### 10. Scale Deployment Down
 ```
 $ kubectl scale deployment docker-k8s-demo --replicas=1
+```
+
+#### 11. Auto Scale Deployment
+```
+$ kubectl autoscale deployment docker-k8s-demo --cpu-percent=50 --min=1 --max=10
 ```
 
 #### 12. Enter the running kubernetes pod 
