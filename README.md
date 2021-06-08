@@ -82,6 +82,7 @@ $ brew install docker-machine
 The Virtualbox is the Virtual Machine where your Docker engine will run.
 ```
 $ brew cask install virtualbox
+$ (alternate) brew install --cask virtualbox
 ```
 
 If your Mac asks you for permission, go to System Preferences -> Security & Privacy -> General. You will see a message like `System software from developer "Oracle America, Inc." was blocked from loading`. Click on the lock in the lower left corner and click Allow, then run `brew cask install virtualbox` again.
